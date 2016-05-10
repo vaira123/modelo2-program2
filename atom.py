@@ -1,16 +1,18 @@
 # coding=utf-8
 from vector import Vector
+
+
 class Atom:
 
-    def __init__(self,id,hydrofobowy,położenie):
+    def __init__(self,id,hydrofobowy,polozenie):
         self.id=id
         self.hydrofobowy=hydrofobowy
-        if type(położenie)==Vector:
-            self.położenie=położenie
-        else:
-            print "błąd położenia"
+        #if type(polozenie)==Vector:
+        self.polozenie=polozenie
+        #else:
+        #    print "blad polozenia"
 
-    def to_pdb(self):
+    def pdb(self):
         section = 'ATOM'.ljust(6)  # 1-6
         id = str(self.id).rjust(5)  # 7-11
         space1 = ''.rjust(1)  # 12
@@ -25,8 +27,8 @@ class Atom:
         resSeq = str(self.id).rjust(4)  # 23-26
         iCode = ''.rjust(1)  # 27
         space3 = ''.rjust(3)  # 28-30
-        x = str(self.x).rjust(8)  # 31-38 fixme przerobić na wektor
-        y = str(self.y).rjust(8)  # 39-46 fixme
+        x = str(self.polozenie[0]).rjust(8)  # 31-38
+        y = str(self.polozenie[1]).rjust(8)  # 39-46
         z = '0'.rjust(8)  # 47-54
         occupancy = ''.rjust(6)  # 55-60
         tempFactor = ''.rjust(6)  # 61-66

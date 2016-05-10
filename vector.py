@@ -1,5 +1,6 @@
 # coding=utf-8
-from functions.all import isnumeric
+
+
 class Vector:
 
     def __init__(self,values):
@@ -13,6 +14,11 @@ class Vector:
             self.dimension=1
             self.vector=[values]
 
+    #def __repr__(self):
+     #   return "Vector" + str(self.vector)
+
+#dodawanie wektorow potrzebne do zmian polozenia atomu?
+
     def __add__(self, other):
         result= []
         if isinstance(other, Vector):
@@ -22,8 +28,7 @@ class Vector:
                 for i in range(len(self.vector)):
                     result.append(self.vector[i] + other.vector[i])
             else:
-                print "różne wymiary wektorów"
-        elif isnumeric(other):
+                print "rozne wymiary wektorow"
             for i in self.vector:
                 result.append(i + other)
         else:
