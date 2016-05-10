@@ -14,8 +14,10 @@ class Vector:
             self.dimension=1
             self.vector=[values]
 
-    #def __repr__(self):
+    #def __repr__(self):  #fixme ładne wyświetlanie
      #   return "Vector" + str(self.vector)
+
+    #todo zrobić funkcję do iteracji po wektorze
 
 #dodawanie wektorow potrzebne do zmian polozenia atomu?
 

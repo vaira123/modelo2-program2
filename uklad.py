@@ -37,6 +37,6 @@ class Uklad:
 ####################################################3
 S='PHPPHPPHHPPHHPPHPPHP'
 Ss=Uklad(S,1)
-Sss=Ss.poczatek()
-Sss.plikk('alla')
+Ss.poczatek()
+Ss.plikk('alla')
 #todo sprawdzić najpierw czy sie ladnie wypisuje poczatek
